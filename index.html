@@ -56,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Tanks WebGL v.1.loader.js";
+      var loaderUrl = buildUrl + "/Builds.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Tanks WebGL v.1.data.unityweb",
-        frameworkUrl: buildUrl + "/Tanks WebGL v.1.framework.js.unityweb",
-        codeUrl: buildUrl + "/Tanks WebGL v.1.wasm.unityweb",
+        dataUrl: buildUrl + "/Builds.data.unityweb",
+        frameworkUrl: buildUrl + "/Builds.framework.js.unityweb",
+        codeUrl: buildUrl + "/Builds.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Tanks",
@@ -80,7 +80,7 @@
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
         config.devicePixelRatio = 1;
-
+        unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         canvas.style.width = "960px";
         canvas.style.height = "600px";
